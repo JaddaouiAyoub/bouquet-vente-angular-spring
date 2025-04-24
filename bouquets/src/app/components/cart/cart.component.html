@@ -1,0 +1,30 @@
+<div class="max-w-3xl mx-auto p-6 mt-10 bg-white shadow-xl rounded-2xl">
+  <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Votre Panier</h2>
+
+  <div *ngIf="panier.length === 0" class="text-center text-gray-500">
+    Votre panier est vide.
+  </div>
+
+  <div *ngFor="let item of panier; let i = index" class="flex items-center justify-between py-4 border-b">
+    <div class="flex items-center space-x-4">
+      <img [src]="'http://localhost:8080' + item.imageUrl" alt="bouquet" class="w-16 h-16 rounded object-cover">
+      <div>
+        <h3 class="font-semibold text-gray-800">{{ item.nom }}</h3>
+        <p class="text-sm text-gray-500">{{ item.description }}</p>
+        <p class="text-sm text-blue-600 font-bold">{{ item.prix }} MAD</p>
+      </div>
+    </div>
+    <button (click)="removeItem(i)" class="text-red-500 hover:text-red-700 text-sm font-semibold">
+      Supprimer
+    </button>
+  </div>
+
+  <div class="mt-6 text-right text-lg font-bold text-gray-700">
+    Total : {{ getTotal() }} MAD
+  </div>
+  <div class="mt-6 text-right">
+    <button (click)="commander()" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-xl font-semibold shadow-md transition duration-300">
+      Commander
+    </button>
+  </div>
+</div>

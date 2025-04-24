@@ -1,0 +1,38 @@
+<header class="bg-pink-50 text-gray-800 p-4 flex items-center justify-between shadow">
+  <!-- Logo -->
+  <div class="flex items-center space-x-2">
+    <img src="/assets/logo.jpg" alt="Logo" class="w-14 h-14 animate-pulse" />
+    <span class="font-semibold text-xl">Bouquets Market</span>
+  </div>
+
+  <!-- Actions à droite -->
+  <div class="flex items-center space-x-4">
+    <!-- Panier -->
+    <div  class="relative">
+      <button (click)="viewCart()">
+        <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
+        <span *ngIf="panierCount > 0" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+          {{ panierCount }}
+        </span>
+      </button>
+    </div>
+
+    <!-- Bouton Login/Logout -->
+    <button
+      *ngIf="!isAuthenticated"
+      (click)="loginPopup.openModal()"
+      class="bg-blue-600 text-white py-2 px-4 rounded-full flex items-center space-x-2 shadow hover:bg-blue-700 transition">
+      <i class="fas fa-user-circle"></i>
+      <span>Login</span>
+    </button>
+
+    <button
+      *ngIf="isAuthenticated"
+      (click)="logout()"
+      class="bg-red-600 text-white py-2 px-4 rounded-full flex items-center space-x-2 shadow hover:bg-red-700 transition">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Logout</span>
+    </button>
+  </div>
+</header>
+<app-login-popup #loginPopup></app-login-popup>
