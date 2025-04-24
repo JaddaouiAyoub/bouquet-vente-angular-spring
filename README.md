@@ -41,13 +41,13 @@ Le projet permet aux utilisateurs de s’inscrire, se connecter, commander des b
 
 ### Backend
 ```bash
-cd bouquets
+cd bouquets-backend
 ./mvnw spring-boot:run
 ```
 
 ### Frontend
 ```bash
-cd bouquets-fronto
+cd bouquets
 npm install
 ng serve
 ```

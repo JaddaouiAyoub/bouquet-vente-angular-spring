@@ -1,0 +1,38 @@
+# --- BACKEND (Spring Boot) ---
+bouquets-backend/HELP.md
+bouquets-backend/target/
+bouquets-backend/.mvn/wrapper/maven-wrapper.jar
+bouquets-backend/.idea/
+bouquets-backend/*.iws
+bouquets-backend/*.iml
+bouquets-backend/*.ipr
+
+# STS / Eclipse
+bouquets-backend/.apt_generated
+bouquets-backend/.classpath
+bouquets-backend/.factorypath
+bouquets-backend/.project
+bouquets-backend/.settings
+bouquets-backend/.springBeans
+bouquets-backend/.sts4-cache
+
+# NetBeans
+bouquets-backend/nbproject/private/
+bouquets-backend/nbbuild/
+bouquets-backend/dist/
+bouquets-backend/nbdist/
+bouquets-backend/.nb-gradle/
+bouquets-backend/build/
+
+# --- FRONTEND (Angular) ---
+bouquets/node_modules/
+bouquets/dist/
+bouquets/.angular/
+bouquets/.idea/
+bouquets/.vscode/
+
+# Angular build outputs (optionnel si tu build avec outputPath différent)
+bouquets/.output/
+
+# Environment files (si tu veux les garder privés)
+bouquets/src/environments/environment*.ts
